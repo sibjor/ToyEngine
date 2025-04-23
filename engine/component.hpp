@@ -13,45 +13,119 @@ enum class ComponentType
     AudioSource,
     UIElement
 };
-
-class GameObject
+class Component
 {
 public:
-    GameObject(){
-        InitGameObject("Default", 0, "default_path");
-    };
-
-    ~GameObject();
-
-    void InitGameObject(std::string name, int id, std::string path)
+    ComponentType GetType()
     {
-        this->name = name;
-        this->id = id;
-        this->path = path;
-    }
-
-    std::pair<Component *, GameObject>  ReturnComponents(){
-        return components;
+        return type;
     }
 
 private:
-    std::pair<Component *, GameObject> components;
-    std::string name;
-    int id;
-    std::string path;
-};
+    ComponentType type;
 
-class Component
+    // Transform
+    Vector3 position;
+    Vector3 rotation;
+    Vector3 scale;
+
+    // Sprite
+    Texture2D texture;
+
+    // Animation
+    int animationFrame;
+    float animationSpeed;
+
+    // Collider
+    Rectangle colliderBounds;
+
+    // Camera
+    Camera camera;
+
+    // Light
+    Color lightColor;
+
+    // ParticleSystem
+    int particleCount;
+
+    // AudioSource
+    Sound sound;
+
+    // UIElement
+    Rectangle uiBounds;
+
+    void SetType(ComponentType type)
 {
-    public:
-        ComponentType Component::GetType(){
-            return type;
-        }
-    private:
-        ComponentType type;
-        GameObject *parent;
+    this->type = type;
 
-        void SetType(ComponentType type){
-            this->type = type;
-        }
+    switch (type)
+    {
+    case ComponentType::Transform:
+        // Initialize Transform component
+        std::cout << "Initializing Transform component" << std::endl;
+        // Exempel: Ställ in en standardposition, rotation och skala
+        position = {0.0f, 0.0f, 0.0f};
+        rotation = {0.0f, 0.0f, 0.0f};
+        scale = {1.0f, 1.0f, 1.0f};
+        break;
+
+    case ComponentType::Sprite:
+        // Initialize Sprite component
+        std::cout << "Initializing Sprite component" << std::endl;
+        texture = LoadTexture("sprite.png"); // Ladda en sprite-textur
+        break;
+
+    case ComponentType::Animation:
+        // Initialize Animation component
+        std::cout << "Initializing Animation component" << std::endl;
+        // Exempel: Ställ in en spritesheet och animationens parametrar
+        animationFrame = 0;
+        animationSpeed = 0.1f;
+        break;
+
+    case ComponentType::Collider:
+        // Initialize Collider component
+        std::cout << "Initializing Collider component" << std::endl;
+        colliderBounds = {0.0f, 0.0f, 1.0f, 1.0f}; // Exempel: En rektangulär collider
+        break;
+
+    case ComponentType::Camera:
+        // Initialize Camera component
+        std::cout << "Initializing Camera component" << std::endl;
+        camera.position = {0.0f, 0.0f, 10.0f};
+        camera.target = {0.0f, 0.0f, 0.0f};
+        camera.up = {0.0f, 1.0f, 0.0f};
+        camera.fovy = 45.0f;
+        break;
+
+    case ComponentType::Light:
+        // Initialize Light component
+        std::cout << "Initializing Light component" << std::endl; // Removed invalid member assignment as Camera3D has no 'type' member
+        lightColor = WHITE; // Exempel: Standardfärg för ljus
+        break;
+
+    case ComponentType::ParticleSystem:
+        // Initialize ParticleSystem component
+        std::cout << "Initializing ParticleSystem component" << std::endl;
+        // Exempel: Initiera partiklar
+        particleCount = 100;
+        break;
+
+    case ComponentType::AudioSource:
+        // Initialize AudioSource component
+        std::cout << "Initializing AudioSource component" << std::endl;
+        sound = LoadSound(""); // Load from path or use a default sound
+        break;
+
+    case ComponentType::UIElement:
+        // Initialize UIElement component
+        std::cout << "Initializing UIElement component" << std::endl;
+        uiBounds = {0.0f, 0.0f, 100.0f, 50.0f}; // Exempel: En rektangulär UI-element
+        break;
+
+    default:
+        std::cerr << "Unknown component type!" << std::endl;
+        break;
+    }
+}
 };
