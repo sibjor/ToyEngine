@@ -12,8 +12,8 @@ enum class EventType
 class Server
 {
 public:
-    Server();
-    ~Server();
+    Server() {}          // Tom konstruktor
+    virtual ~Server() {} // Virtuell destruktor för polymorfism
 
     void ListenToEvents(EventType eventType)
     {

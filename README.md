@@ -12,5 +12,6 @@ flowchart TD
     G --> H[gameobject.hpp]
     A --> H 
     D --> H
-    H --> I[game.cpp]
+    H --> I[game/main.cpp]
+    
 ```
