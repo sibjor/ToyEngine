@@ -2367,7 +2367,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_X11_xcb_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_X11_xcb_LIB",
@@ -2383,7 +2383,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_X11_xcb_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libX11-xcb.so"
 		},
 		{
 			"name" : "X11_XRes_INCLUDE_PATH",
@@ -3327,7 +3327,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_cursor_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_cursor_LIB",
@@ -3343,7 +3343,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_cursor_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-cursor.so"
 		},
 		{
 			"name" : "X11_xcb_damage_INCLUDE_PATH",
@@ -3455,7 +3455,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_dri3_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_dri3_LIB",
@@ -3471,7 +3471,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_dri3_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-dri3.so"
 		},
 		{
 			"name" : "X11_xcb_errors_INCLUDE_PATH",
@@ -3519,7 +3519,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_ewmh_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_ewmh_LIB",
@@ -3535,7 +3535,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_ewmh_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-ewmh.so"
 		},
 		{
 			"name" : "X11_xcb_glx_INCLUDE_PATH",
@@ -3615,7 +3615,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_image_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_image_LIB",
@@ -3631,7 +3631,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_image_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-image.so"
 		},
 		{
 			"name" : "X11_xcb_keysyms_INCLUDE_PATH",
@@ -3647,7 +3647,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_keysyms_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_keysyms_LIB",
@@ -3663,7 +3663,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_keysyms_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-keysyms.so"
 		},
 		{
 			"name" : "X11_xcb_present_INCLUDE_PATH",
@@ -3711,7 +3711,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_randr_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_randr_LIB",
@@ -3727,7 +3727,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_randr_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-randr.so"
 		},
 		{
 			"name" : "X11_xcb_record_INCLUDE_PATH",
@@ -3775,7 +3775,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_render_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_render_LIB",
@@ -3791,7 +3791,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_render_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-render.so"
 		},
 		{
 			"name" : "X11_xcb_render_util_INCLUDE_PATH",
@@ -3807,7 +3807,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_render_util_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_render_util_LIB",
@@ -3823,7 +3823,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_render_util_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-render-util.so"
 		},
 		{
 			"name" : "X11_xcb_res_INCLUDE_PATH",
@@ -3935,7 +3935,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "X11_xcb_shm_INCLUDE_PATH-NOTFOUND"
+			"value" : "/usr/include"
 		},
 		{
 			"name" : "X11_xcb_shm_LIB",
@@ -3951,7 +3951,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "X11_xcb_shm_LIB-NOTFOUND"
+			"value" : "/usr/lib/x86_64-linux-gnu/libxcb-shm.so"
 		},
 		{
 			"name" : "X11_xcb_sync_INCLUDE_PATH",
