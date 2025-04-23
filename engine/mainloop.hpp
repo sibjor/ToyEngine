@@ -1,6 +1,7 @@
-#include "gameobject.hpp"
+#include "server.hpp"
 
-class MainLoop
+
+class MainLoop : public Server
 {
 public:
     MainLoop() : isRunning(false) {}
