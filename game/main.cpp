@@ -1,15 +1,10 @@
-#include "raylib.h"
+#include "mainloop.hpp"
 
 int main()
 {
-    InitWindow(800, 600, "Raylib i VS Code!");
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Hej från Raylib!", 200, 200, 20, DARKGRAY);
-        EndDrawing();
-    }
-    CloseWindow();
+    MainLoop mainLoop;
+    mainLoop.Init();
+    mainLoop.Run();
+
     return 0;
 }
