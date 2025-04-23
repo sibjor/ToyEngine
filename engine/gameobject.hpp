@@ -1,6 +1,7 @@
 #include "component.hpp"
+#include "server.hpp"
 
-class GameObject
+class GameObject : public Server
 {
     public:
         GameObject();
