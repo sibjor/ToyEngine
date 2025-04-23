@@ -1,7 +1,7 @@
 # ToyEngine
 Raylib abstraction layer part of Forsbergs Game Programming education
 
-´´´mermaid
+```mermaid
 flowchart TD
     A[central.h] --> B
     C[raylib] --> A
@@ -13,4 +13,4 @@ flowchart TD
     A --> H 
     D --> H
     H --> I[game.cpp]
-´´´
+```
