@@ -1,4 +1,4 @@
-/home/sixten/Dokument/ToyEngine/build/CMakeFiles/my_game.dir
+/home/sixten/Dokument/ToyEngine/build/CMakeFiles/ToyEngine.dir
 /home/sixten/Dokument/ToyEngine/build/CMakeFiles/package.dir
 /home/sixten/Dokument/ToyEngine/build/CMakeFiles/package_source.dir
 /home/sixten/Dokument/ToyEngine/build/CMakeFiles/edit_cache.dir

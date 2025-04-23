@@ -41,38 +41,38 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/sixten/Dokument/ToyEngine/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target my_game
+# Object build statements for EXECUTABLE target ToyEngine
 
 
 #############################################
-# Order-only phony target for my_game
+# Order-only phony target for ToyEngine
 
-build cmake_object_order_depends_target_my_game: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_raylib
+build cmake_object_order_depends_target_ToyEngine: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_raylib
 
-build CMakeFiles/my_game.dir/main.cpp.o: CXX_COMPILER__my_game_unscanned_Debug /home/sixten/Dokument/ToyEngine/main.cpp || cmake_object_order_depends_target_my_game
+build CMakeFiles/ToyEngine.dir/game/main.cpp.o: CXX_COMPILER__ToyEngine_unscanned_Debug /home/sixten/Dokument/ToyEngine/game/main.cpp || cmake_object_order_depends_target_ToyEngine
   DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
-  DEP_FILE = CMakeFiles/my_game.dir/main.cpp.o.d
+  DEP_FILE = CMakeFiles/ToyEngine.dir/game/main.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/sixten/Dokument/ToyEngine/external/raylib/src -I/home/sixten/Dokument/ToyEngine/external/raylib/src/external/glfw/include
-  OBJECT_DIR = CMakeFiles/my_game.dir
-  OBJECT_FILE_DIR = CMakeFiles/my_game.dir
+  INCLUDES = -I/home/sixten/Dokument/ToyEngine/engine -I/home/sixten/Dokument/ToyEngine/game -I/home/sixten/Dokument/ToyEngine/external/raylib/src -I/home/sixten/Dokument/ToyEngine/external/raylib/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles/ToyEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles/ToyEngine.dir/game
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target my_game
+# Link build statements for EXECUTABLE target ToyEngine
 
 
 #############################################
-# Link the executable my_game
+# Link the executable ToyEngine
 
-build my_game: CXX_EXECUTABLE_LINKER__my_game_Debug CMakeFiles/my_game.dir/main.cpp.o | external/raylib/raylib/libraylib.a /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || external/raylib/raylib/external/glfw/src/glfw external/raylib/raylib/libraylib.a
+build ToyEngine: CXX_EXECUTABLE_LINKER__ToyEngine_Debug CMakeFiles/ToyEngine.dir/game/main.cpp.o | external/raylib/raylib/libraylib.a /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || external/raylib/raylib/external/glfw/src/glfw external/raylib/raylib/libraylib.a
   FLAGS = -g
   LINK_LIBRARIES = external/raylib/raylib/libraylib.a  -lm  -lpthread  -ldl  -lGL  -lX11  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libGLU.so  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl
-  OBJECT_DIR = CMakeFiles/my_game.dir
+  OBJECT_DIR = CMakeFiles/ToyEngine.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = my_game
-  TARGET_PDB = my_game.dbg
+  TARGET_FILE = ToyEngine
+  TARGET_PDB = ToyEngine.dbg
 
 
 #############################################
@@ -868,7 +868,7 @@ build update_mappings: phony external/raylib/raylib/external/glfw/src/update_map
 #############################################
 # Folder: /home/sixten/Dokument/ToyEngine/build
 
-build all: phony my_game external/raylib/all
+build all: phony ToyEngine external/raylib/all
 
 # =============================================================================
 

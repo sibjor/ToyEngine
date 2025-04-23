@@ -20,7 +20,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -90,7 +90,7 @@
 					"source" : "external/raylib/src/external/glfw/src",
 					"targetIndexes" : 
 					[
-						0,
+						1,
 						4
 					]
 				}
@@ -110,7 +110,7 @@
 					"name" : "ToyEngine",
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -141,7 +141,7 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						0,
+						1,
 						4
 					]
 				}
@@ -149,18 +149,18 @@
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 0,
+					"id" : "ToyEngine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ToyEngine-Debug-c8dbfeb8a7b3c35d754c.json",
+					"name" : "ToyEngine",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 4,
 					"id" : "glfw::@0caa76eb0594e07c8f96",
 					"jsonFile" : "target-glfw-Debug-1c52c8480d56463fbcf7.json",
 					"name" : "glfw",
 					"projectIndex" : 2
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "my_game::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-my_game-Debug-5b923c12d4ab311584e8.json",
-					"name" : "my_game",
-					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
