@@ -1,32 +1,23 @@
 #include "server.hpp"
 #include "gamestate.hpp"
 
-enum class State
-{
-    Running,
-    Paused,
-    Stopped,
-    Exiting,
-    Error,
-    Uninitialized,
-};
-
 class MainLoop : public Server
 {
 public:
     bool continueLoop; // Flagga för att kontrollera om loopen körs
 
-    MainLoop() : continueLoop(false) {}
+    MainLoop() : continueLoop(true) {}
 
-    ~MainLoop() {}
+    ~MainLoop() {
+        delete this;
+        std::cout << "MainLoop destructor called." << std::endl;
+    }
 
     void Init()
     {
+        continueLoop = true;
         InitWindow(800, 600, "ToyEngine");
         SetTargetFPS(60); // Sätt FPS
-        if(continueLoop = true){
-            InitProgramState(ProgramState::MainMenu);
-        }
         std::cout << "Initialization complete." << std::endl;
     }
 
@@ -52,26 +43,6 @@ public:
                 std::cout << "Engine exited successfully." << std::endl;
             }
         }
-    }
-
-    /* This function*/
-    ProgramState InitProgramState(ProgramState state){
-        switch (state)
-        {
-        case ProgramState::MainMenu:
-            std::cout << "Initializing Main Menu" << std::endl;
-            break;
-        case ProgramState::GameRunning:
-            std::cout << "Initializing Game" << std::endl;
-            break;
-        case ProgramState::GameOver:
-            std::cout << "Initializing  Game Over State" << std::endl;
-            break;
-        default:
-            std::cout << "Unknown State" << std::endl;
-            break;
-        }
-        return state;
     }
 
     void ProcessEvents()

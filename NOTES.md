@@ -17,6 +17,7 @@
 - A pointer points to somewhere on the heap
 - auto - like "var" in C#
 - unique_ptr can be moved to another allocated unique_ptr but never copied. std::move(a_ptr)...
+- emplace back for a std::vector will move a ptr. push_back will create a copy.
 ## State pattern
 - Instead of a swtich statement, write polymorphic c++ classes for each state, switching between objects in a controller class.
 - A holder of a single changing pointer to an object for each state.

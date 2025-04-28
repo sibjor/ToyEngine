@@ -4,7 +4,7 @@ int main()
 {
     MainLoop mainLoop;
     mainLoop.Init();
-    mainLoop.Run();
+    mainLoop.ContinueLoop(true);
 
     return 0;
 }
