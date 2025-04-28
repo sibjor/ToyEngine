@@ -1,56 +1,38 @@
 #include "central.h"
 
-enum class EventType
+enum class Protocol
 {
-    EVENT_NONE,
-    EVENT_KEY_PRESSED,
-    EVENT_KEY_RELEASED,
-    EVENT_MOUSE_CLICKED,
-    EVENT_MOUSE_MOVED,
-    EVENT_WINDOW_RESIZED,
+    DeliverToRoot,
+    DeliverToSibling,
+    DeliverToParent,
+    DeliverToChildren,
+    DeliverToAll,
+    DeliverToSingular,
 };
 class Server
 {
 public:
-    Server() {}          // Tom konstruktor
+    Server() { 
+        HandleEvents(Protocol::DeliverToRoot);
+        
+    }          // Tom konstruktor
     virtual ~Server() {} // Virtuell destruktor för polymorfism
 
-    void ListenToEvents(EventType eventType)
+    /* This function
+    - can return or handle incoming events 
+    - thus, messages can go either up or downwards */
+    Protocol HandleEvents(Protocol eventType)
     {
         switch (eventType)
         {
-        case EventType::EVENT_KEY_PRESSED:
-            if (IsKeyPressed(KEY_SPACE)) // Exempel: Kontrollera om mellanslagstangenten trycks ned
-            {
-                std::cout << "Space key pressed!" << std::endl;
-            }
+            // Run in the constructor by default
+        case Protocol::DeliverToRoot:
+            std::cout << "Delivering event to root." << std::endl;
+            std::cout << "Server initialized." << std::endl;
+            // Hantera händelse för root
             break;
 
-        case EventType::EVENT_KEY_RELEASED:
-            if (IsKeyReleased(KEY_SPACE)) // Exempel: Kontrollera om mellanslagstangenten släpps
-            {
-                std::cout << "Space key released!" << std::endl;
-            }
-            break;
-
-        case EventType::EVENT_MOUSE_CLICKED:
-            if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) // Kontrollera om vänster musknapp trycks ned
-            {
-                std::cout << "Mouse left button clicked!" << std::endl;
-            }
-            break;
-
-        case EventType::EVENT_MOUSE_MOVED:
-        {
-            Vector2 mousePosition = GetMousePosition(); // Hämta musens position
-            std::cout << "Mouse moved to: (" << mousePosition.x << ", " << mousePosition.y << ")" << std::endl;
-            break;
-        }
-
-        case EventType::EVENT_WINDOW_RESIZED:
-            // Raylib hanterar inte fönsterstorleksändringar direkt, men du kan använda en anpassad lösning
-            std::cout << "Window resized (custom handling required)" << std::endl;
-            break;
+        break;
 
         default:
             std::cout << "Unhandled event type!" << std::endl;
